@@ -36,30 +36,6 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
-
-
-	 // Funzione per attivare la modalità fullscreen
-	function activateFullscreen() {
-	  var element = document.documentElement; // Ottieni l'elemento radice del documento
-	
-	  // Verifica se il browser supporta la modalità fullscreen
-	  if (element.requestFullscreen) {
-	    element.requestFullscreen();
-		   unityInstance.SetFullscreen(1);
-	  } else if (element.webkitRequestFullscreen) { /* Safari */
-	    element.webkitRequestFullscreen();
-		   unityInstance.SetFullscreen(1);
-	  } else if (element.msRequestFullscreen) { /* IE11 */
-	    element.msRequestFullscreen();
-		   unityInstance.SetFullscreen(1);
-	  }
-	}
-
-	// Chiamata alla funzione per attivare la modalità fullscreen al caricamento della pagina
-	window.onload = function() {
-	  activateFullscreen();
-	};
-
 	    
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
